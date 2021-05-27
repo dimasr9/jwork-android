@@ -3,6 +3,7 @@ package dimasradhitya.jwork_android;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.widget.ExpandableListView;
 
 import com.android.volley.Response;
 
@@ -18,11 +19,15 @@ public class MainActivity extends AppCompatActivity {
     private ArrayList<Recruiter> listRecruiter = new ArrayList<>();
     private ArrayList<Job> jobIdList = new ArrayList<>();
     private HashMap<Recruiter, ArrayList<Job>> childMapping = new HashMap<>();
-    
+    private MainListAdapter listAdapter;
+    ExpandableListView expListView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        expListView = findViewById(R.id.lvExp);
+        refreshList();
 
     }
 
@@ -84,6 +89,8 @@ public class MainActivity extends AppCompatActivity {
                             }
                         }
                     }
+                    listAdapter = new MainListAdapter(getApplicationContext(), listRecruiter, childMapping);
+                    expListView.setAdapter(listAdapter);
                 } catch (JSONException e) {
                     e.printStackTrace();
                 };
