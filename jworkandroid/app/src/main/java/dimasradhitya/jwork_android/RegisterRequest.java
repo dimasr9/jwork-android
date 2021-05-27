@@ -2,6 +2,7 @@ package dimasradhitya.jwork_android;
 
 import com.android.volley.AuthFailureError;
 import com.android.volley.Response;
+import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 
 import java.util.HashMap;
@@ -12,8 +13,8 @@ public class RegisterRequest extends StringRequest {
     private Map<String, String> params;
     
     public RegisterRequest(String name, String email, String password,
-                           Response.Listener<String> listener) {
-        super(Method.POST, URL, listener, null);
+                           Response.Listener<String> listener, Response.ErrorListener errorListener) {
+        super(Method.POST, URL, listener, errorListener);
         params = new HashMap<>();
         params.put("name", name);
         params.put("email", email);
@@ -23,4 +24,5 @@ public class RegisterRequest extends StringRequest {
     protected Map<String, String> getParams() throws AuthFailureError {
         return params;
     }
+
 }

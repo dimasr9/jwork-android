@@ -10,12 +10,13 @@ import android.widget.Toast;
 
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
+import com.android.volley.VolleyError;
 import com.android.volley.toolbox.Volley;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
-public class RegisterActivity extends AppCompatActivity {
+public class RegisterActivity extends AppCompatActivity implements Response.ErrorListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,10 +50,15 @@ public class RegisterActivity extends AppCompatActivity {
                         }
                     }
                 };
-                RegisterRequest registerRequest = new RegisterRequest(name, email, password, responseListener);
+                RegisterRequest registerRequest = new RegisterRequest(name, email, password, responseListener, RegisterActivity.this);
                 RequestQueue queue = Volley.newRequestQueue(RegisterActivity.this);
                 queue.add(registerRequest);
             }
         });
+    }
+
+    @Override
+    public void onErrorResponse(VolleyError error) {
+
     }
 }
