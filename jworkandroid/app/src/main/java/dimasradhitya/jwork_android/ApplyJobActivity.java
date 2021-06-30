@@ -18,6 +18,12 @@ import com.android.volley.toolbox.Volley;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+/**
+ * Class yang menyimpan fungsi aktivitas apply job
+ *
+ * @author Dimas Radhitya
+ * @version 30 Juni 2021
+ */
 public class ApplyJobActivity extends AppCompatActivity {
 
     private int jobseekerID, jobID, bonus;

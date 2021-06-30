@@ -22,10 +22,16 @@ import org.json.JSONObject;
 
 import static android.content.ContentValues.TAG;
 
+/**
+ * Class yang menyimpan fungsi aktivitas selesai job
+ *
+ * @author Dimas Radhitya
+ * @version 30 Juni 2021
+ */
 public class SelesaiJobActivity extends AppCompatActivity {
 
     private int jobseekerId;
-    private TextView tvJobseekerName, tvInvoiceDate, tvPaymentType, tvInvoiceStatus, tvReferralCode, tvJobName, tvFeeJob, tvTotalFee;
+    private TextView tvJobseekerName, tvInvoiceDate, tvPaymentType, tvInvoiceId, tvReferralCode, tvJobName, tvTotalFee;
     private Button btnCancel, btnFinished;
     private int invoiceId;
 
@@ -39,6 +45,7 @@ public class SelesaiJobActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_selesai_job);
 
+        tvInvoiceId = findViewById(R.id.invoice_id);
         tvJobseekerName = findViewById(R.id.jobseeker_name);
         tvInvoiceDate = findViewById(R.id.invoice_date);
         tvPaymentType = findViewById(R.id.payment_type);
@@ -150,7 +157,8 @@ public class SelesaiJobActivity extends AppCompatActivity {
                             String jobseekerName = invoice.getJSONObject("jobseeker").getString("name");
                             tvJobseekerName.setText(jobseekerName);
 
-                            invoiceId = invoice.getInt("id");
+                            int invoiceId = invoice.getInt("id");
+                            tvInvoiceId.setText(Integer.toString(invoiceId));
 
                             //Object Invoice Date
                             String date = invoice.getString("date");

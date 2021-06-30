@@ -6,6 +6,12 @@ import com.android.volley.toolbox.StringRequest;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * Class yang menyimpan fungsi request apply job
+ *
+ * @author Dimas Radhitya
+ * @version 30 Juni 2021
+ */
 public class ApplyJobRequest extends StringRequest {
     private static String URLBank = "http://10.0.2.2/invoice/createBankPayment";
     private static String URLEwallet = "http://10.0.2.2/invoice/createEWalletPayment";

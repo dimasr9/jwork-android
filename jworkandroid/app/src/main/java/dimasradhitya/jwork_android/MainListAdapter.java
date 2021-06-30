@@ -12,6 +12,12 @@ import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
 import android.widget.TextView;
 
+/**
+ * Class yang menyimpan fungsi list adapter pada aktivitas main
+ *
+ * @author Dimas Radhitya
+ * @version 30 Juni 2021
+ */
 public class MainListAdapter extends BaseExpandableListAdapter {
     private Context context;
     private ArrayList<Recruiter> listDataHeader;

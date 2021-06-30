@@ -6,6 +6,12 @@ import com.android.volley.toolbox.StringRequest;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * Class yang menyimpan fungsi request selesai job
+ *
+ * @author Dimas Radhitya
+ * @version 30 Juni 2021
+ */
 public class JobSelesaiRequest extends StringRequest {
     private static String URL = "http://10.0.2.2/invoice/InvoiceStatus/";
     private Map<String, String> params;

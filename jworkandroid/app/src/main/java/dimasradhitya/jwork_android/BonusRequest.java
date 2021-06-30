@@ -6,6 +6,12 @@ import com.android.volley.toolbox.StringRequest;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * Class yang menyimpan fungsi request bonus
+ *
+ * @author Dimas Radhitya
+ * @version 30 Juni 2021
+ */
 public class BonusRequest extends StringRequest {
 
     private static String URL = "http://10.0.2.2/bonus";

@@ -16,6 +16,12 @@ import com.android.volley.toolbox.Volley;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+/**
+ * Class yang menyimpan fungsi aktivitas register
+ *
+ * @author Dimas Radhitya
+ * @version 30 Juni 2021
+ */
 public class RegisterActivity extends AppCompatActivity implements Response.ErrorListener {
 
     @Override

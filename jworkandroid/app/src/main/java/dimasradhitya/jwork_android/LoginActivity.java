@@ -17,8 +17,18 @@ import com.android.volley.toolbox.Volley;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+/**
+ * Class yang menyimpan fungsi aktivitas login
+ *
+ * @author Dimas Radhitya
+ * @version 30 Juni 2021
+ */
 public class LoginActivity extends AppCompatActivity {
 
+    /**
+     * class oncreate saat pembuatan view
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -33,6 +43,11 @@ public class LoginActivity extends AppCompatActivity {
         editTextPassword.setText("Password123");
 
         buttonLogin.setOnClickListener(new View.OnClickListener() {
+
+            /**
+             * method membaca oncreate
+             * @param view
+             */
            public void onClick(View view){
                String email = editTextEmail.getText().toString();
                String password = editTextPassword.getText().toString();
@@ -59,6 +74,10 @@ public class LoginActivity extends AppCompatActivity {
         });
 
         plainTextRegister.setOnClickListener(new View.OnClickListener(){
+            /**
+             * method untuk membaca tombol ditekan
+             * @param view
+             */
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);

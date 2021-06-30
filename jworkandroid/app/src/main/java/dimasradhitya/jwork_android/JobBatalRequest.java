@@ -6,6 +6,12 @@ import com.android.volley.toolbox.StringRequest;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * Class yang menyimpan fungsi request batal job
+ *
+ * @author Dimas Radhitya
+ * @version 30 Juni 2021
+ */
 public class JobBatalRequest extends StringRequest {
     private static final String URL = "http://10.0.2.2/invoice/InvoiceStatus/";
     private final Map<String, String> params;

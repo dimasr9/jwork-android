@@ -19,6 +19,12 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+/**
+ * Class yang menyimpan fungsi aktivitas main
+ *
+ * @author Dimas Radhitya
+ * @version 30 Juni 2021
+ */
 public class MainActivity extends AppCompatActivity {
 
     MainListAdapter listAdapter;
