@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ApplyJobActivity">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="100dp"
+        app:cardCornerRadius="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="696dp"
+            android:layout_margin="15dp">
+
+            <TextView
+                android:id="@+id/pesanan"
+                android:layout_width="175dp"
+                android:layout_height="52dp"
+                android:layout_marginTop="12dp"
+                android:text="Apply Job"
+                android:textColor="@color/black"
+                android:textSize="32sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/staticJobName"
+                android:layout_width="87dp"
+                android:layout_height="27dp"
+                android:layout_marginTop="15dp"
+                android:text="Job Name"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/pesanan" />
+
+            <TextView
+                android:id="@+id/job_name"
+                android:layout_width="87dp"
+                android:layout_height="27dp"
+                android:layout_marginTop="15dp"
+                android:hint="TextView"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/pesanan" />
+
+            <TextView
+                android:id="@+id/staticCategory"
+                android:layout_width="87dp"
+                android:layout_height="27dp"
+                android:layout_marginTop="10dp"
+                android:text="Job Category"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/staticJobName" />
+
+            <TextView
+                android:id="@+id/job_category"
+                android:layout_width="87dp"
+                android:layout_height="27dp"
+                android:layout_marginTop="10dp"
+                android:hint="TextView"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/job_name" />
+
+            <TextView
+                android:id="@+id/staticFee"
+                android:layout_width="87dp"
+                android:layout_height="27dp"
+                android:layout_marginTop="10dp"
+                android:text="Job Fee"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/staticCategory" />
+
+            <TextView
+                android:id="@+id/job_fee"
+                android:layout_width="87dp"
+                android:layout_height="27dp"
+                android:layout_marginTop="10dp"
+                android:hint="TextView"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/job_category" />
+
+            <TextView
+                android:id="@+id/staticPayMethod"
+                android:layout_width="125dp"
+                android:layout_height="26dp"
+                android:layout_marginTop="10dp"
+                android:text="Payment Method"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/staticFee" />
+
+            <RadioGroup
+                android:id="@+id/radioGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/staticPayMethod">
+
+                <RadioButton
+                    android:id="@+id/ewallet"
+                    android:layout_width="113dp"
+                    android:layout_height="wrap_content"
+                    android:minHeight="20dp"
+                    android:text="E-Wallet"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+                <RadioButton
+                    android:id="@+id/bank"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minHeight="20dp"
+                    android:text="Bank"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/apply_staticReferralCode"
+                android:layout_width="87dp"
+                android:layout_height="27dp"
+                android:layout_marginTop="20dp"
+                android:text="Referral Code"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/radioGroup" />
+
+            <EditText
+                android:id="@+id/referral_code"
+                android:layout_width="85dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="208dp"
+                android:layout_marginTop="120dp"
+                android:ems="10"
+                android:hint="Edit Text"
+                android:inputType="textPersonName"
+                app:layout_constraintStart_toEndOf="@+id/apply_staticReferralCode"
+                app:layout_constraintTop_toBottomOf="@+id/job_fee" />
+
+            <TextView
+                android:id="@+id/staticTotalFee"
+                android:layout_width="87dp"
+                android:layout_height="27dp"
+                android:layout_marginTop="30dp"
+                android:text="Total Fee"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/apply_staticReferralCode" />
+
+            <TextView
+                android:id="@+id/total_fee"
+                android:layout_width="87dp"
+                android:layout_height="27dp"
+                android:layout_marginTop="30dp"
+                android:hint="TextView"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/apply_staticReferralCode" />
+
+            <Button
+                android:id="@+id/btnCount"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="88dp"
+                android:backgroundTint="#808080"
+                android:text="count"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/staticTotalFee" />
+
+            <Button
+                android:id="@+id/btnApply"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="156dp"
+                android:backgroundTint="#808080"
+                android:text="apply_now"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/staticTotalFee" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</ScrollView>
